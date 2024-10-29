@@ -1,0 +1,29 @@
+body {
+    font-family: "Courier New", "Lucida Console", monospace;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    background-color: #57BCF2;
+}
+header {
+    text-align: center;
+    border-bottom: solid 8px #333;
+}
+footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    right: 20px;
+}
+
+a:link,
+a:active,
+a:hover,
+a:visited {
+    color: #333;
+}
+
+
+a:hover {
+    font-weight: bold;
+}
