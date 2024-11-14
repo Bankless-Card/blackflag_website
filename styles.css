@@ -10,10 +10,14 @@ header {
     border-bottom: solid 8px #333;
 }
 footer {
-    text-align: center;
+    width: 100%;
+    background-color: #57BCF2;
+    text-align: right;
     position: fixed;
     bottom: 0px;
-    right: 20px;
+    right: 0px;
+    height: 1em;
+    padding: 10px;
 }
 
 a:link,
