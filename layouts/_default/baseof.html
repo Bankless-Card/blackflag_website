@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Title }}</title>
     <link rel="stylesheet" href="/styles.css">
+    <!-- React (production) -->
+    <script defer crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script defer crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <!-- Our React components -->
+    <script defer src="/react-components/dist/react-components.js"></script>
 </head>
 <body>
     <div class="home-link">
@@ -18,5 +23,15 @@
         </h2>
     </header>
     {{ block "main" . }}{{ end }}
+    <!-- React root container -->
+    <div id="react-root"></div>
+    
+    <!-- Initialize React -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const root = ReactDOM.createRoot(document.getElementById('react-root'));
+        root.render(React.createElement(ReactComponents.Example));
+      });
+    </script>
 </body>
 </html>

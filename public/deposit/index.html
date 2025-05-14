@@ -5,8 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deposit to PoolTogether</title>
     <link rel="stylesheet" href="/styles.css">
+    
+    <script defer crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script defer crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    
+    <script defer src="/react-components/dist/react-components.js"></script>
 </head>
 <body>
+    <div class="home-link">
+        <a href="/">Home</a>
+    </div>
+    <header>
+        <h2>
+            <img src="/img/black_flag_noclip.png" alt="Black Flag Logo" class="logo">
+            Deposit to PoolTogether
+            <img src="/img/black_flag_noclip.png" alt="Black Flag Logo" class="logo">
+        </h2>
+    </header>
     
 <div class="deposit-container">
     <h1>Deposit to PoolTogether</h1>
@@ -200,5 +215,15 @@ document.getElementById('connect-walletconnect').addEventListener('click', conne
 document.getElementById('deposit-button').addEventListener('click', deposit);
 </script>
 
+    
+    <div id="react-root"></div>
+    
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const root = ReactDOM.createRoot(document.getElementById('react-root'));
+        root.render(React.createElement(ReactComponents.Example));
+      });
+    </script>
 </body>
 </html>
